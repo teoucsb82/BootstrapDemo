@@ -3,7 +3,7 @@
 <% message = (user.persisted? ? "Update user" : "Create user") %>
 <% header = (user.persisted? ? "Update user" : "Create user") %>
 
-<!-- <div class="row"> -->
+<div class="row">
   <div class="col-xs-4 jumbotron" id="sign-up">
     <h2><%= header %></h2>
     <form role="form" action="<%= action %>" method="post">
@@ -39,4 +39,4 @@
       <input type="submit" class="btn btn-primary" value="<%= message %>">
     </form>
   </div>
-<!-- </div> -->
+</div>
