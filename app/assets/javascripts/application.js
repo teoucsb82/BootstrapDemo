@@ -16,6 +16,9 @@
 //= require_tree .
 
 $(function() {
+  $(".mySelector").tooltip();
+  $("body").scrollspy({ target: '#side-nav'})
+
   $('#contact-button').on('click', function(event) {
     event.preventDefault();
 
@@ -60,8 +63,5 @@ $(function() {
       $('#contact-error-strong').text("Failure!")
       $('#contact-error-text').text("Your message was not sent")
     }
-
-
-
   })
 });

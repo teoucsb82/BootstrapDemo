@@ -32,3 +32,23 @@ body {
 hr {
   border: 1px solid black;
 }
+
+.carousel {
+  margin-top: 15px;
+}
+
+.nav-pills {
+  margin-top: 5px;
+//  background-color: white;
+
+}
+
+li.active {
+  border-left: 1px solid black;
+}
+
+.affix {
+
+    top: 300px;
+
+}
