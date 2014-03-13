@@ -1,36 +1,42 @@
 <% action = (user.persisted? ? user_url(user) : users_url) %>
 <% method = (user.persisted? ? "put" : "post") %>
 <% message = (user.persisted? ? "Update user" : "Create user") %>
+<% header = (user.persisted? ? "Update user" : "Create user") %>
 
-<form role="form" action="<%= action %>" method="post">
-  <input
-     name="_method"
-     type="hidden"
-     value="<%= method %>">
-  <input
-     name="authenticity_token"
-     type="hidden"
-     value="<%= form_authenticity_token %>">
+<!-- <div class="row"> -->
+  <div class="col-xs-4 jumbotron" id="sign-up">
+    <h2><%= header %></h2>
+    <form role="form" action="<%= action %>" method="post">
+      <input
+         name="_method"
+         type="hidden"
+         value="<%= method %>">
+      <input
+         name="authenticity_token"
+         type="hidden"
+         value="<%= form_authenticity_token %>">
 
-  <div class="form-group">
-    <label for="user_username">Username</label>
-    <input
-       class="form-control"
-       placeholder="Username"
-       id="user_username"
-       name="user[username]"
-       type="text">
+      <div class="form-group">
+        <label for="user_username">Username</label>
+        <input
+           class="form-control"
+           placeholder="Username"
+           id="user_username"
+           name="user[username]"
+           type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="user_password">Password</label>
+        <input
+           class="form-control"
+           placeholder="Password"
+           id="user_password"
+           name="user[password]"
+           type="password">
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="<%= message %>">
+    </form>
   </div>
-
-  <div class="form-group">
-    <label for="user_password">Password</label>
-    <input
-       class="form-control"
-       placeholder="Password"
-       id="user_password"
-       name="user[password]"
-       type="password">
-  </div>
-
-  <input type="submit" class="btn btn-default" value="<%= message %>">
-</form>
+<!-- </div> -->
