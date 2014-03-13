@@ -1,29 +1,35 @@
 <h1>Contact Us!</h1>
+<div id="contact-errors" class="hidden alert-dismissable alert-success">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong id="contact-error-strong"></strong> <span id="contact-error-text"><span>
+</div>
 <hr>
 <div class="row">
   <div class="col-xs-5 col-xs-offset-1">
     <h4 style="padding-bottom: 15px;">Personal Information</h4>
-    <form role="form">
+    <form role="form" id="contact-form">
+      <input type="hidden" name="authenticity_token" value="<% form_authenticity_token %>">
+
       <div class="form-group input-group">
         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-        <input autofocus="autofocus" type="text" class="form-control" placeholder="Name">
+        <input autofocus="autofocus" type="text" class="form-control" placeholder="Name" id="contact-name">
       </div>
 
       <div class="form-group input-group">
         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-        <input type="email" class="form-control" placeholder="Email Address">
+        <input type="email" class="form-control" placeholder="Email Address" id="contact-email">
       </div>
 
       <h4>Message</h4>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Subject">
+        <input type="text" class="form-control" placeholder="Subject" id="contact-subject">
       </div>
 
       <div class="form-group">
-        <textarea class="form-control" cols="40" rows="6" placeholder="Message"></textarea>
+        <textarea class="form-control" cols="40" rows="6" placeholder="Message" id="contact-message"></textarea>
       </div>
 
-      <button class="btn btn-primary">Submit</button>
+      <input type="button" id="contact-button" class="btn btn-primary" value="Send Message"></input>
     </form>
   </div>
 
