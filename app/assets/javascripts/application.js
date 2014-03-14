@@ -17,7 +17,13 @@
 
 $(function() {
   $(".mySelector").tooltip();
-  $("body").scrollspy({ target: '#side-nav'})
+  $("body").scrollspy({ target: '#side-nav'});
+  // $('#modal-window').modal('show');
+  $('#myAffix').affix({
+    offset: {
+      top: 730
+    }
+  })
 
   $('#contact-button').on('click', function(event) {
     event.preventDefault();
