@@ -1,4 +1,5 @@
-# Bootstrap Demo App [Live version available on heroku](http://shrouded-lake-8095.herokuapp.com/)
+# Bootstrap Demo App 
+## [Live version available on heroku](http://shrouded-lake-8095.herokuapp.com/)
 
 ## Features
 
